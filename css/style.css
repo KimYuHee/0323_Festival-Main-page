@@ -1,0 +1,268 @@
+@charset "UTF-8";
+
+/*reset*/
+*{
+   color: #333;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+body {background-color: #fff;}
+
+a {text-decoration: none;}
+a:link {color: #222;}
+a:visited {color: #222;}
+a:hover {color: #333;}
+a:active {color: #333;}
+
+ul {list-style: none;}
+
+img {vertical-align: middle;}
+/*reset*/
+
+/*div#wrap*/
+div#wrap {
+    width: 1000px;
+    text-align: left;
+    display: flex;
+}
+/*div#wrap*/
+
+/*header#header*/
+header#header {
+    width: 200px;
+}
+
+/*div#headerLogo*/
+div#headerLogo {
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+}
+
+/*div#contentsArea*/
+/*nav#gnb*/
+nav#gnb {
+    text-align: center;
+}
+
+/*공통영역*/
+#gnb>ul#mainMenu li a {
+    color: #555;
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+}
+#gnb>ul#mainMenu li a:hover {
+    color: #fff;
+    background-color: rgba(241, 129, 98, 0.6);
+}
+#gnb>ul#mainMenu>li>a {
+    font-size: 16px;
+}
+#gnb>ul#mainMenu>li:not(:first-child)>a {
+    border-top: none;
+}
+/*#mainMenu*/
+#gnb>ul#mainMenu>li>a {
+    padding: 14px;
+    border: 1px solid rgba(241, 129, 98, 0.6);
+}
+/*.subMenu*/
+#gnb>#mainMenu>.mainLi ul.subMenu {
+    position: relative;
+    display: none;
+}
+ul.subMenu>li.subLi>a {
+    font-size: 14px;
+    padding: 7px;
+    border: 1px solid rgba(241, 129, 98, 0.6);
+    border-top: none;
+}
+/*header#header*/
+
+/*div#slide*/
+
+div#slide {
+    width: 800px;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+}
+div#slideFrame {
+    width: 800px;
+    height: 350px;
+}
+div#slideFrame>a {
+    position: absolute;
+}
+div#slideFrame>a:not(:first-child) {
+    display: none;
+}
+div#slideFrame>a>span {
+    width: 310px;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px 10px;
+    border: 4px solid rgba(241, 129, 98, 0.8);
+    border-radius: 20px;
+    background-color: rgba(241, 129, 98, 0.7);
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+/*div#slide*/
+
+/*div#contents*/
+div#contents {
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+/*공통영역*/
+div#contents>div#notice, div#gallery, div#shortcut {
+    flex:1;
+    padding-top: 10px;
+}
+div#contents button.tabBtn{
+    font-size: 18px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border: 1px solid #aaa;
+    border-bottom: none;
+    background-color: #eee;
+
+    position: relative;
+    left: 36px;
+    top: 1px;
+}
+#contents div.tabArea {
+    width: 280px;
+    font-size: 13px;
+    padding: 10px;
+    margin-left: 10px;
+    border: 1px solid #aaa;
+}
+
+/*div#notice*/
+#notice>#noticeArea a:first-child {
+    width: 180px;
+    line-height:30px;
+    display: inline-block;
+}
+#notice button#noticeBtn {
+    background-color: #fff;
+}
+/*layer*/
+div#layerBG {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    display: none;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+}
+div#layerSize {
+    width: 1000px;
+    height: 650px;
+    position: relative;
+}
+div#layerPopup {
+    width: 500px;
+    height: 200px;
+    font-size: 17px;
+    text-align: center;
+    line-height: 30px;
+    padding: 20px 10px;
+    border-radius: 20px;
+    border: 3px solid rgba(241, 129, 98, 0.5);
+    background-color: #fff;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+div#layerPopup span {
+    color:rgba(241, 129, 98, 0.9);
+    font-weight: bold;
+    font-size: 24px;
+    margin: 30px 10px;
+    display: inline-block;
+}
+button#closeBtn {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 2px 8px;
+    border: 2px solid #fff;
+    cursor: pointer;
+    background-color: rgba(241, 129, 98, 0.8);
+
+    position: relative;
+    left: 214px;
+    top: -132px;
+}
+
+/*div#gallery*/
+#gallery #galleryArea {
+    text-align: center;
+    padding: 29px 10px;
+}
+#gallery button#galleryBtn {
+    top: 0px;
+}
+/*div#shortcut*/
+div#shortcut {
+    text-align: center;
+    line-height: 178px;
+}
+
+/*div#contents*/
+
+/*div#contentsArea*/
+
+/*footer#footer*/
+footer#footer {
+    height: 100px;
+    display: flex;
+}
+
+/*div#copy*/
+div#copy {
+    font-size: 17px;
+    text-align: center;
+    line-height: 100px;
+    flex: 1;
+}
+/*div#footerInfo*/
+#footer #footerInfo {
+    flex: 1;
+}
+
+/*공통영역*/
+#footerInfo div#snsLink, div#familySite {
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+/*div#familySite*/
+div#familySite select{
+    font-size: 18px;
+}
+
+/*footer#footer*/
+
+header, main, nav, footer {
+    display: block;
+}
